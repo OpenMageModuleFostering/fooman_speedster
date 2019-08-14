@@ -39,8 +39,8 @@ class Fooman_Speedster_Block_Page_Html_Head extends Mage_Page_Block_Html_Head
 
         $lines = array();
 
-        $baseJs = Mage::getBaseUrl('js',Mage::app()->getStore()->isCurrentlySecure() ? array('_secure'=>1) : array());
-        $baseJsFast = Mage::getBaseUrl('web',Mage::app()->getStore()->isCurrentlySecure() ? array('_secure'=>1) : array()).'minify/';
+        $baseJs = Mage::getBaseUrl('js');
+        $baseJsFast = Mage::getBaseUrl('web').'minify/';
         $html = '';
         //$html = "<!--".BP."-->\n";
         $script = '<script type="text/javascript" src="%s" %s></script>';
