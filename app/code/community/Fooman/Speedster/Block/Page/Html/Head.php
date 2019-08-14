@@ -80,7 +80,7 @@ class Fooman_Speedster_Block_Page_Html_Head extends Mage_Page_Block_Html_Head
                     break;
 
                 case 'link_rel':
-                    $lines[$if]['other'][] = sprintf('<link%s href="%s" />', $item['params'], $item['name']);
+                    $lines[$if]['other'][] = sprintf('<link %s href="%s" />', $item['params'], $item['name']);
                     break;
 
             }
