@@ -44,8 +44,8 @@ class Fooman_Speedster_Block_Page_Html_Head extends Mage_Page_Block_Html_Head
         $html = '';
         //$html = "<!--".BP."-->\n";
         $script = '<script type="text/javascript" src="%s" %s></script>';
-        $stylesheet = '<link type="text/css" rel="stylesheet" href="%s" %s></link>';
-        $alternate = '<link rel="alternate" type="%s" href="%s" %s></link>';
+        $stylesheet = '<link type="text/css" rel="stylesheet" href="%s" %s />';
+        $alternate = '<link rel="alternate" type="%s" href="%s" %s />';
 
         foreach ($this->_data['items'] as $item) {
             if (!is_null($item['cond']) && !$this->getData($item['cond'])) {
@@ -78,6 +78,11 @@ class Fooman_Speedster_Block_Page_Html_Head extends Mage_Page_Block_Html_Head
                 case 'rss':
                     $lines[$if]['other'][] = sprintf($alternate, 'application/rss+xml'/*'text/xml' for IE?*/, $item['name'], $item['params']);
                     break;
+
+                case 'link_rel':
+                    $lines[$if]['other'][] = sprintf('<link%s href="%s" />', $item['params'], $item['name']);
+                    break;
+
             }
         }
 
