@@ -77,11 +77,11 @@ if (isset($_GET['f'])) {
                 && file_exists(BP .  $filename)) {
                 //Minify can't handle the regex for the email addresses - change to file with less demanding regex for email validation
                 //fixed in Magento 1.4 (keep this workaround in place until support for versions below 1.4 is removed)
-                $filename = str_replace("validation.js", "validation-4min.js", $filename);
+                $filename = str_replace("js".DS."prototype".DS."validation.js", "js".DS."prototype".DS."validation-4min.js", $filename);
                 $servefiles[]=BP . $filename;
             }
     }
-
+    
     //options for minify request
     $serveOptions = array(
         'rewriteCssUris'=>true
