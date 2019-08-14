@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Fooman_Speedster",
+    "type": "magento-module",
+    "license": "OSL-v3.0-/-BSD-see-files",
+    "homepage": "",
+    "description": "Speed up your store by combining, compressing and caching JS and CSS.",
+    "authors": [
+    {
+        "name": "Kristof Ringleff",
+        "email": "kristof@fooman.co.nz"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
